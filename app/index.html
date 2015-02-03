@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="MayDayApp">
+  <body du-parallax custom="transitionBackground" ng-app="MayDayApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -31,7 +31,7 @@
         <h3 class="text-muted">&nbsp;</h3>
         <!--<img width=50 height=50 src="/images/icon_mayday.png" alt="logo" />-->
                 <!-- HEADER -->
-        <div id="header_wrap" class="outer">
+        <div du-parallax y="background"  id="header_wrap" class="outer">
             <header class="inner">
               <a id="forkme_banner" href="https://github.com/jackygrahamez/MayDay" target="_blank">View on GitHub</a>
 
@@ -83,6 +83,8 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+    <script src="bower_components/ng-parallax/angular-parallax.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

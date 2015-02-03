@@ -15,9 +15,10 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'duParallax'
   ])
-  .run(function($rootScope, $location) {
+  .run(function($rootScope, $location, parallaxHelper) {
     $rootScope.navigation =  [
     { page: 'Home', path: '' },
     { page: 'About', path: 'about' },
@@ -29,6 +30,25 @@ angular
         var currentRoute = $location.path().substring(1) || 'home';
         currentRoute = currentRoute.toLowerCase();
         return page === currentRoute ? 'active' : '';
+    };
+    $rootScope.background = parallaxHelper.createAnimator(-0.3);
+    $rootScope.invertColors = function(elementPosition) {
+      console.dir(elementPosition);
+      var factor = -0.4;
+      var pos = Math.min(Math.max(elementPosition.elemY*factor, 0), 255);
+      var bg = 255-pos;
+      return {
+        backgroundColor: 'rgb(' + bg + ', ' + bg + ', ' + bg + ')',
+        color: 'rgb(' + pos + ', ' + pos + ', ' + pos + ')'
+      };
+    };
+    $rootScope.transitionBackground = function(elementPosition) {
+      //console.dir(elementPosition);
+      var left = elementPosition.elemY * -0.6;
+      console.log(left);
+      return {
+        backgroundPosition: left + 'px 0px '
+      };
     };
   })
   .filter('reverse', function() {
