@@ -22,6 +22,7 @@ angular
     { page: 'Home', path: '' },
     { page: 'About', path: 'about' },
     { page: 'Technology', path: 'technology' },
+    { page: 'Privacy', path: 'privacy' },
     { page: 'Contact', path: 'contact' }];
     $rootScope.navClass = function (page) {
         page = page.toLowerCase();
@@ -52,6 +53,10 @@ angular
       .when('/technology', {
         templateUrl: 'views/technology.html',
         controller: 'TechnologyCtrl'
+      })
+      .when('/privacy', {
+        templateUrl: 'views/privacy.html',
+        controller: 'PrivacyCtrl'
       })
       .otherwise({
         redirectTo: '/'
