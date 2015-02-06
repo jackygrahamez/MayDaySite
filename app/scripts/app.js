@@ -25,6 +25,7 @@ angular
     { page: 'Technology', path: 'technology' },
     { page: 'Privacy', path: 'privacy' },
     { page: 'Contact', path: 'contact' }];
+    $rootScope.backgroundPositoins = '';
     $rootScope.navClass = function (page) {
         page = page.toLowerCase();
         var currentRoute = $location.path().substring(1) || 'home';
