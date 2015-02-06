@@ -615,8 +615,7 @@ Small Device Styles
 Even Smaller Device Styles
 *******************************************************************************/
 
-
-@media screen and max-width 320px{
+@media screen and (max-width: 320px) {
   .inner {
     max-width:320px!important;
     min-width:0!important;
