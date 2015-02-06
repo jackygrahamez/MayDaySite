@@ -44,13 +44,31 @@ angular
       };
     };
     $rootScope.transitionBackground = function(elementPosition) {
-      //console.dir(elementPosition);
-      var left = elementPosition.elemY * -0.6;
-      //console.log(left);
+      var left = elementPosition.elemY * -0.6,
+      right = left * -1,
+      positions = left + 'px '+left+'px, ' +
+      parseInt(right + 2) + 'px '+parseInt(right + 2)+'px, ' +
+      parseInt(left + 3) + 'px '+parseInt(right + 3)+'px, ' +
+      parseInt(right + 4) + 'px '+parseInt(right + 4)+'px, ' +
+      '0px '+left+'px, '+
+      '0px '+parseInt(right + 3)+'px, '+
+      '0px '+parseInt(right + 2)+'px, '+
+      '0px '+parseInt(right + 4)+'px';
+      console.log('positions '+positions);
       return {
-        backgroundPosition: left + 'px 0px '
+        backgroundPosition: positions
       };
     };
+    /*
+    }, a.transitionBackground = function(a) {
+        var b = a.elemY * -.6,
+            c = -1 * b,
+            d = b + 'px 0px, ' + parseInt(c + 2) + 'px 100px, ' + parseInt(b + 3) + 'px 165px, ' + parseInt(c + 4) + 'px 190px';
+        return {
+            backgroundPosition: d
+        }
+    }
+    */
   })
   .filter('reverse', function() {
     return function(items) {

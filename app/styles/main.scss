@@ -228,12 +228,24 @@ Theme Styles
 body {
   box-sizing: border-box;
   color:#373737;
-  background: #212121 url(../images/mayday_morse.png) repeat 0 0;
-  background-size: 15%;
+  //background: #212121 url(../images/mayday_morse.png) repeat 0 0;
+  //background-size: 15%;
   font-size: 16px;
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color:#212121;
+  background-image:url(../images/mayday_morse_o30.png),
+  url(../images/mayday_morse_o40.png),
+  url(../images/mayday_morse_o50.png),
+  url(../images/mayday_morse_o60.png),
+  url(../images/mayday_morse_o30_flip.png),
+  url(../images/mayday_morse_o40_flip.png),
+  url(../images/mayday_morse_o50_flip.png),
+  url(../images/mayday_morse_o60_flip.png);
+  background-repeat:repeat;
+  //background-position:0 0 10px 20px 30px;
+  //background-size:12%;
 }
 
 h1, h2, h3, h4, h5, h6 {
