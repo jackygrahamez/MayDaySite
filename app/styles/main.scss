@@ -3,6 +3,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@font-face {
+font-family:momstypewriterregular;
+src:url(fonts/moms_typewriter-webfont.eot?#iefix) format(embedded-opentype),url(fonts/moms_typewriter-webfont.woff2) format(woff2),url(fonts/moms_typewriter-webfont.woff) format(woff),url(fonts/moms_typewriter-webfont.ttf) format(truetype),url(fonts/moms_typewriter-webfont.svg#momstypewriterregular) format(svg);
+font-weight:400;
+font-style:normal;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -174,7 +181,6 @@ Slate Theme for GitHub Pages
 by Jason Costello, @jsncostello
 *******************************************************************************/
 
-@import url(pygment_trac.css);
 
 /*******************************************************************************
 MeyerWeb Reset
@@ -477,6 +483,7 @@ Full-Width Styles
   font-size: 42px;
   font-weight: 700;
   text-shadow: #111 0px 0px 10px;
+  font-family: momstypewriterregular;
 }
 
 #project_tagline {
@@ -602,4 +609,16 @@ Small Device Styles
     font-size: 11px;
   }
 
+}
+
+/*******************************************************************************
+Even Smaller Device Styles
+*******************************************************************************/
+
+
+@media screen and max-width 320px{
+  .inner {
+    max-width:320px!important;
+    min-width:0!important;
+  }
 }

@@ -33,7 +33,7 @@ angular
     };
     $rootScope.background = parallaxHelper.createAnimator(-0.3);
     $rootScope.invertColors = function(elementPosition) {
-      console.dir(elementPosition);
+      //console.dir(elementPosition);
       var factor = -0.4;
       var pos = Math.min(Math.max(elementPosition.elemY*factor, 0), 255);
       var bg = 255-pos;
@@ -45,7 +45,7 @@ angular
     $rootScope.transitionBackground = function(elementPosition) {
       //console.dir(elementPosition);
       var left = elementPosition.elemY * -0.6;
-      console.log(left);
+      //console.log(left);
       return {
         backgroundPosition: left + 'px 0px '
       };
