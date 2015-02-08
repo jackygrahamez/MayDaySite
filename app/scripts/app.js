@@ -54,12 +54,42 @@ angular
       '0px '+parseInt(right + 3)+'px, '+
       '0px '+parseInt(right + 2)+'px, '+
       '0px '+parseInt(right + 4)+'px';
-      console.log('positions '+positions);
+      //console.log('positions '+positions);
       return {
         backgroundPosition: positions
       };
     };
+    $rootScope.grow = function(a) {
+        return a.elemY < 300 && a.elemY > 50 ? {
+            msTransform: "scale(1.2)",
+            webkitTransform: "scale(1.2)",
+            MozTransform: "scale(1.2)",
+            OTransform: "scale(1.2)",
+            transform: "scale(1.2)"
+        } : {
+            msTransform: "scale(1)",
+            webkitTransform: "scale(1)",
+            MozTransform: "scale(1)",
+            OTransform: "scale(1)",
+            transform: "scale(1)"
+        }
+    }
     /*
+    a.grow = function(a) {
+        return a.elemY < 300 && a.elemY > 50 ? {
+            msTransform: "scale(1.2)",
+            webkitTransform: "scale(1.2)",
+            MozTransform: "scale(1.2)",
+            OTransform: "scale(1.2)",
+            transform: "scale(1.2)"
+        } : {
+            msTransform: "scale(1)",
+            webkitTransform: "scale(1)",
+            MozTransform: "scale(1)",
+            OTransform: "scale(1)",
+            transform: "scale(1)"
+        }
+    }
     }, a.transitionBackground = function(a) {
         var b = a.elemY * -.6,
             c = -1 * b,
